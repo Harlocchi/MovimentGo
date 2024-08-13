@@ -9,12 +9,12 @@ public class StudentMABCtest {
 
     @Id
     private String Id;
-    private Student student;
+    private String studentId;
     private MABCtest mabctest;
 
 
-    public StudentMABCtest(Student student, MABCtest mabctest) {
-        this.student = student;
+    public StudentMABCtest(String student, MABCtest mabctest) {
+        this.studentId = student;
         this.mabctest = mabctest;
     }
 
@@ -29,19 +29,19 @@ public class StudentMABCtest {
         Id = id;
     }
 
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
     public MABCtest getMabctest() {
         return mabctest;
     }
 
     public void setMabctest(MABCtest mabctest) {
         this.mabctest = mabctest;
-    }
-
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        this.student = student;
     }
 }

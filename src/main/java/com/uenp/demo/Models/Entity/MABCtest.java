@@ -2,8 +2,6 @@ package com.uenp.demo.Models.Entity;
 
 public class MABCtest{
 
-
-
     private Integer RotatePinsPrefHandTime; //segundos
     private Integer RotatePinsNonPrefHandTime; //segundos
     private Integer TriangleNutsAndBoltsTime; //segundos
@@ -32,6 +30,8 @@ public class MABCtest{
         ZigZagPrefLegHits = zigZagPrefLegHits;
         ZigZagNonPrefLegHits = zigZagNonPrefLegHits;
     }
+
+
 
     public Integer getRotatePinsPrefHandTime() {
         return RotatePinsPrefHandTime;
