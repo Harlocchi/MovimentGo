@@ -31,7 +31,7 @@ public class StudentService {
         existingStudent.setCity(studentDetails.getCity());
         existingStudent.setBirthday(studentDetails.getBirthday());
         existingStudent.setGender(studentDetails.getGender());
-        existingStudent.setIntituition(studentDetails.getIntituition());
+        existingStudent.setIntituitionId(studentDetails.getIntituitionId());
         existingStudent.setClassroom(studentDetails.getClassroom());
         return studentRepository.save(existingStudent);
     }

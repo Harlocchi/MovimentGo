@@ -30,9 +30,21 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> addUser(@PathVariable String id) {
+    public ResponseEntity<User> findUser(@PathVariable String id) {
         User userFind = userService.findById(id);
         return new ResponseEntity<>(userFind, HttpStatus.ACCEPTED);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<User> deleteUser(@PathVariable String id) {
+        userService.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+
+
+    @PutMapping("/{id}")
+    public ResponseEntity<User> updateUser(@PathVariable String id, @RequestBody User user) {
+        userService.updateById(id, user);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
 }
