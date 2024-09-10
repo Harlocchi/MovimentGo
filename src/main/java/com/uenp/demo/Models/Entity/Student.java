@@ -6,23 +6,24 @@ import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 
 
 @Data
 public class Student {
 
-    @Id
-    private String id;
+
     private String name;
     private String city;
-    private Date birthday;
+    private LocalDate birthday;
     private String gender;
     private String intituitionId;
     private String classroom;
 
-    public Student(String id, String name, String city, Date birthday, String gender, String intituitionId, String classroom) {
-        this.id = id;
+
+    public Student(String name, String city, LocalDate birthday, String gender, String intituitionId, String classroom) {
         this.name = name;
         this.city = city;
         this.birthday = birthday;
@@ -32,6 +33,11 @@ public class Student {
     }
 
     public Student() {
+    }
+
+    public int getAgeInMonths(LocalDate init){
+        Period period = Period.between(birthday, init);
+        return period.getYears() * 12 + period.getMonths();
     }
 
 

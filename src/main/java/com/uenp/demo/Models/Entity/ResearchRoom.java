@@ -1,8 +1,10 @@
 package com.uenp.demo.Models.Entity;
 
+import org.springframework.cglib.core.Local;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Document(collection = "research_room")
@@ -13,12 +15,14 @@ public class ResearchRoom {
     private String name;
     private Instituition instituition;
     private List<StudentMABCtest> studentsMABC;
+    private LocalDate InicialDate;
 
-    public ResearchRoom(String id, String name, Instituition instituition, List<StudentMABCtest> studentsMABC) {
+    public ResearchRoom(String id, String name, Instituition instituition, List<StudentMABCtest> studentsMABC, LocalDate inicialDate) {
         this.id = id;
         this.name = name;
         this.instituition = instituition;
         this.studentsMABC = studentsMABC;
+        InicialDate = inicialDate;
     }
 
     public ResearchRoom() {
@@ -54,5 +58,13 @@ public class ResearchRoom {
 
     public void setStudentsMABC(List<StudentMABCtest> studentsMABC) {
         this.studentsMABC = studentsMABC;
+    }
+
+    public LocalDate getInicialDate() {
+        return InicialDate;
+    }
+
+    public void setInicialDate(LocalDate inicialDate) {
+        InicialDate = inicialDate;
     }
 }

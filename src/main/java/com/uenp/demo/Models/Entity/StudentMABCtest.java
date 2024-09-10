@@ -1,47 +1,42 @@
 package com.uenp.demo.Models.Entity;
 
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+import java.util.Date;
+
+@Data
 @Document(collection = "studentMABCtest")
-public class StudentMABCtest {
+public class StudentMABCtest extends Student {
 
     @Id
     private String Id;
-    private String studentId;
     private MABCtest mabctest;
+    private LocalDate testInit;
 
 
-    public StudentMABCtest(String student, MABCtest mabctest) {
-        this.studentId = student;
+    public StudentMABCtest(String name, String city, LocalDate birthday, String gender, String intituitionId, String classroom, String id, MABCtest mabctest) {
+        super(name, city, birthday, gender, intituitionId, classroom);
+        Id = id;
         this.mabctest = mabctest;
     }
 
     public StudentMABCtest() {
     }
 
-    public String getId() {
-        return Id;
+
+    public int getScoregetTurningPegsPrefHandTimeByAge(int AgeMonths){
+        int mesesIdade = getAgeInMonths(testInit);
+        int score = mabctest.getTurningPegsPrefHandTime();
+        //entre 3 e 3:5 anos
+        if(mesesIdade >=36 && mesesIdade  <= 41){
+
+        }
     }
 
-    public void setId(String id) {
-        Id = id;
-    }
 
-    public String getStudentId() {
-        return studentId;
-    }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
-
-    public MABCtest getMabctest() {
-        return mabctest;
-    }
-
-    public void setMabctest(MABCtest mabctest) {
-        this.mabctest = mabctest;
-    }
 }

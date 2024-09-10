@@ -2,107 +2,109 @@ package com.uenp.demo.Models.Entity;
 
 public class MABCtest{
 
-    private Integer RotatePinsPrefHandTime; //segundos
-    private Integer RotatePinsNonPrefHandTime; //segundos
-    private Integer TriangleNutsAndBoltsTime; //segundos
-    private Integer TrailDrawingMistake;//erros
+    private Integer turningPegsPrefHandTime; //segundos
+    private Integer turningPegsNonPrefHandTime; //segundos
+    private Integer triangleNutsAndBoltsTime; //segundos
+    private Integer drawingTrailMistake;//erros
 
-    private Integer catPrefHandHits;//acertos
-    private Integer catNonPrefHandHits;//acertos
-    private Integer playTargetOnWallHits;//acertos
+    private Integer cathingPrefHandHits;//acertos
+    private Integer cathingOtherHandHits;//acertos
+    private Integer throwingWallTargetHits;//acertos
 
-    private Integer balanceBoardsTime;//tempo
-    private Integer walkHeelToToeHits;//acertos
+    private Integer twoBoardBalanceTime;//tempo
+    private Integer walkingHeelToToeHits;//acertos
     private Integer ZigZagPrefLegHits ;//acertos
     private Integer ZigZagNonPrefLegHits;//acertos
 
 
-    public MABCtest(Integer rotatePinsPrefHandTime, Integer rotatePinsNonPrefHandTime, Integer triangleNutsAndBoltsTime, Integer trailDrawingMistake, Integer catPrefHandHits, Integer catNonPrefHandHits, Integer playTargetOnWallHits, Integer balanceBoardsTime, Integer walkHeelToToeHits, Integer zigZagPrefLegHits, Integer zigZagNonPrefLegHits) {
-        RotatePinsPrefHandTime = rotatePinsPrefHandTime;
-        RotatePinsNonPrefHandTime = rotatePinsNonPrefHandTime;
-        TriangleNutsAndBoltsTime = triangleNutsAndBoltsTime;
-        TrailDrawingMistake = trailDrawingMistake;
-        this.catPrefHandHits = catPrefHandHits;
-        this.catNonPrefHandHits = catNonPrefHandHits;
-        this.playTargetOnWallHits = playTargetOnWallHits;
-        this.balanceBoardsTime = balanceBoardsTime;
-        this.walkHeelToToeHits = walkHeelToToeHits;
+    public MABCtest(Integer turningPegsPrefHandTime, Integer turningPegsNonPrefHandTime, Integer triangleNutsAndBoltsTime, Integer drawingTrailMistake, Integer cathingPrefHandHits, Integer cathingOtherHandHits, Integer throwingWallTargetHits, Integer twoBoardBalanceTime, Integer walkingHeelToToeHits, Integer zigZagPrefLegHits, Integer zigZagNonPrefLegHits) {
+        this.turningPegsPrefHandTime = turningPegsPrefHandTime;
+        this.turningPegsNonPrefHandTime = turningPegsNonPrefHandTime;
+        this.triangleNutsAndBoltsTime = triangleNutsAndBoltsTime;
+        this.drawingTrailMistake = drawingTrailMistake;
+        this.cathingPrefHandHits = cathingPrefHandHits;
+        this.cathingOtherHandHits = cathingOtherHandHits;
+        this.throwingWallTargetHits = throwingWallTargetHits;
+        this.twoBoardBalanceTime = twoBoardBalanceTime;
+        this.walkingHeelToToeHits = walkingHeelToToeHits;
         ZigZagPrefLegHits = zigZagPrefLegHits;
         ZigZagNonPrefLegHits = zigZagNonPrefLegHits;
     }
 
 
-
-    public Integer getRotatePinsPrefHandTime() {
-        return RotatePinsPrefHandTime;
+    public MABCtest() {
     }
 
-    public void setRotatePinsPrefHandTime(Integer rotatePinsPrefHandTime) {
-        RotatePinsPrefHandTime = rotatePinsPrefHandTime;
+    public Integer getTurningPegsPrefHandTime() {
+        return turningPegsPrefHandTime;
     }
 
-    public Integer getRotatePinsNonPrefHandTime() {
-        return RotatePinsNonPrefHandTime;
+    public void setTurningPegsPrefHandTime(Integer turningPegsPrefHandTime) {
+        this.turningPegsPrefHandTime = turningPegsPrefHandTime;
     }
 
-    public void setRotatePinsNonPrefHandTime(Integer rotatePinsNonPrefHandTime) {
-        RotatePinsNonPrefHandTime = rotatePinsNonPrefHandTime;
+    public Integer getTurningPegsNonPrefHandTime() {
+        return turningPegsNonPrefHandTime;
+    }
+
+    public void setTurningPegsNonPrefHandTime(Integer turningPegsNonPrefHandTime) {
+        this.turningPegsNonPrefHandTime = turningPegsNonPrefHandTime;
     }
 
     public Integer getTriangleNutsAndBoltsTime() {
-        return TriangleNutsAndBoltsTime;
+        return triangleNutsAndBoltsTime;
     }
 
     public void setTriangleNutsAndBoltsTime(Integer triangleNutsAndBoltsTime) {
-        TriangleNutsAndBoltsTime = triangleNutsAndBoltsTime;
+        this.triangleNutsAndBoltsTime = triangleNutsAndBoltsTime;
     }
 
-    public Integer getTrailDrawingMistake() {
-        return TrailDrawingMistake;
+    public Integer getDrawingTrailMistake() {
+        return drawingTrailMistake;
     }
 
-    public void setTrailDrawingMistake(Integer trailDrawingMistake) {
-        TrailDrawingMistake = trailDrawingMistake;
+    public void setDrawingTrailMistake(Integer drawingTrailMistake) {
+        this.drawingTrailMistake = drawingTrailMistake;
     }
 
-    public Integer getCatPrefHandHits() {
-        return catPrefHandHits;
+    public Integer getCathingPrefHandHits() {
+        return cathingPrefHandHits;
     }
 
-    public void setCatPrefHandHits(Integer catPrefHandHits) {
-        this.catPrefHandHits = catPrefHandHits;
+    public void setCathingPrefHandHits(Integer cathingPrefHandHits) {
+        this.cathingPrefHandHits = cathingPrefHandHits;
     }
 
-    public Integer getCatNonPrefHandHits() {
-        return catNonPrefHandHits;
+    public Integer getCathingOtherHandHits() {
+        return cathingOtherHandHits;
     }
 
-    public void setCatNonPrefHandHits(Integer catNonPrefHandHits) {
-        this.catNonPrefHandHits = catNonPrefHandHits;
+    public void setCathingOtherHandHits(Integer cathingOtherHandHits) {
+        this.cathingOtherHandHits = cathingOtherHandHits;
     }
 
-    public Integer getPlayTargetOnWallHits() {
-        return playTargetOnWallHits;
+    public Integer getThrowingWallTargetHits() {
+        return throwingWallTargetHits;
     }
 
-    public void setPlayTargetOnWallHits(Integer playTargetOnWallHits) {
-        this.playTargetOnWallHits = playTargetOnWallHits;
+    public void setThrowingWallTargetHits(Integer throwingWallTargetHits) {
+        this.throwingWallTargetHits = throwingWallTargetHits;
     }
 
-    public Integer getBalanceBoardsTime() {
-        return balanceBoardsTime;
+    public Integer getTwoBoardBalanceTime() {
+        return twoBoardBalanceTime;
     }
 
-    public void setBalanceBoardsTime(Integer balanceBoardsTime) {
-        this.balanceBoardsTime = balanceBoardsTime;
+    public void setTwoBoardBalanceTime(Integer twoBoardBalanceTime) {
+        this.twoBoardBalanceTime = twoBoardBalanceTime;
     }
 
-    public Integer getWalkHeelToToeHits() {
-        return walkHeelToToeHits;
+    public Integer getWalkingHeelToToeHits() {
+        return walkingHeelToToeHits;
     }
 
-    public void setWalkHeelToToeHits(Integer walkHeelToToeHits) {
-        this.walkHeelToToeHits = walkHeelToToeHits;
+    public void setWalkingHeelToToeHits(Integer walkingHeelToToeHits) {
+        this.walkingHeelToToeHits = walkingHeelToToeHits;
     }
 
     public Integer getZigZagPrefLegHits() {
