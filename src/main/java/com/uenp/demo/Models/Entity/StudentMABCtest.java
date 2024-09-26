@@ -33,7 +33,6 @@ public class StudentMABCtest extends Student {
         int score = mabctest.getTurningPegsPrefHandTime();
         //entre 3 e 3:5 anos
         if(mesesIdade >=36 && mesesIdade  <= 41){
-
         }
     }
 
